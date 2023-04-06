@@ -28,7 +28,7 @@ def Home(request):
                     random_chars += random.choice(random_chars_list)
             s = ShortURL(original_url=original_website, short_url=random_chars)
             s.save()
-            return redirect('redirect', url=s.short_url)
+            return redirect(Redirect, url=s.short_url)
     else:
         form = CreateNewShortURL()
     context = {'form': form}

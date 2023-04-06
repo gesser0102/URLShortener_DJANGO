@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.Home, name='home'),
-    path('<str:url>', views.Redirect, name='redirect')
+    path('sucess/<str:url>', views.Redirect, name='redirect')
 ]
 
